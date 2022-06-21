@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.keep:kylin-api:0.0.62">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/keep/kylin-api/0.0.62/kylin-api-0.0.62.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/keep/kylin-api/0.0.62/kylin-api-0.0.62-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/keep/kylin-api/0.0.62/kylin-api-0.0.62-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

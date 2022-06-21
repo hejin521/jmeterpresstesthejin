@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+<!-- Enable annotation configuration
+    <context:annotation-config/>
+    <context:component-scan base-package="com.gotokeep"/>
+    <import resource="applicationContext-dubbo.xml"/> -->
+
+
+    <!-- dubbo configuration -->
+    <dubbo:application name="jmeterpresstest"/>
+
+    <!-- dubbo configuration pre-->
+    <dubbo:registry address="zookeeper://172.19.8.83:2181?backup=172.19.6.174:2181,172.19.3.83:2181" timeout="2000"/>
+    <dubbo:protocol name="dubbo" port="20880" threads="1000"/>
+
+    <!-- 算法服务 -->
+    <dubbo:reference interface="com.keep.medivh.api.SmartWorkoutRecommend"
+                     id="smartWorkoutRecommend"
+                     version="1.0" timeout="3000" check="true" />
+</beans>
